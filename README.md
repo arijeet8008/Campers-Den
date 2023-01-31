@@ -1,1 +1,1 @@
-# laughing-potato
+# Campers' Den
