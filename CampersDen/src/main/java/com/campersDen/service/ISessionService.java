@@ -5,5 +5,5 @@ import com.campersDen.model.Session;
 
 public interface ISessionService {
 
-	public Session getASessionByKey(String key)throws SessionException;
+//	public Session getASessionByKey(String key)throws SessionException;
 }

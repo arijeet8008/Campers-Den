@@ -8,7 +8,7 @@ import com.campersDen.model.Session;
 
 public interface ILoginService {
 
-	public Session login(LoginDTO loginDto)throws LoginException, AdminException;
-	
-	public String logout(Integer userId)throws LoginException;
+//	public Session login(LoginDTO loginDto)throws LoginException, AdminException;
+//	
+//	public String logout(Integer userId)throws LoginException;
 }

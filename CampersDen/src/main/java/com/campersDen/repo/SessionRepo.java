@@ -8,5 +8,5 @@ import com.campersDen.model.Session;
 @Repository
 public interface SessionRepo extends JpaRepository<Session, Integer>{
 	
-	public Session findBySessionKey(String key);
+//	public Session findBySessionKey(String key);
 }
