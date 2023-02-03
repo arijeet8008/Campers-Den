@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.campersDen.model.AdminDTO"/>
+    <fullyQualifiedTypeName name="com.campersDen.exception.SessionException"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.Admin"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.UserType"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.Session"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.Address"/>
+    <fullyQualifiedTypeName name="com.campersDen.exception.AdminException"/>
+</qualifiedTypeNameHistroy>
