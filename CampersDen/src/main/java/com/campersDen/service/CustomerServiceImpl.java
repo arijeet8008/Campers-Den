@@ -13,7 +13,7 @@ import com.campersDen.repo.AddressRepo;
 import com.campersDen.repo.CustomerRepo;
 
 @Service
-public class CustomerServiceImpl implements ICustomerService{
+public class CustomerServiceImpl implements CustomerService{
 
 	@Autowired
 	private CustomerRepo cRepo;

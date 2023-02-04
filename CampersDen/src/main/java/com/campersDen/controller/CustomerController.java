@@ -23,17 +23,17 @@ import com.campersDen.model.Customer;
 import com.campersDen.model.CustomerDTO;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
-import com.campersDen.service.ICustomerService;
-import com.campersDen.service.ISessionService;
+import com.campersDen.service.CustomerService;
+import com.campersDen.service.SessionService;
 
 @RestController
 public class CustomerController {
 
 	@Autowired
-	private ICustomerService custService;
+	private CustomerService custService;
 	
 	@Autowired
-	private ISessionService sessionService;
+	private SessionService sessionService;
 	
 	@PostMapping("/customers")
 	public ResponseEntity<Customer> addCustomer(@RequestBody @Valid CustomerDTO customer) throws CustomerException{

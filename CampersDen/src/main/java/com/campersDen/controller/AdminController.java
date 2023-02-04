@@ -18,18 +18,18 @@ import com.campersDen.model.Admin;
 import com.campersDen.model.AdminDTO;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
-import com.campersDen.service.IAdminService;
-import com.campersDen.service.ISessionService;
+import com.campersDen.service.AdminService;
+import com.campersDen.service.SessionService;
 //import com.campersDen.service.ISessionService;
 
 @RestController
 public class AdminController {
 
 	@Autowired
-	private IAdminService adminService;
+	private AdminService adminService;
 	
 	@Autowired
-	private ISessionService sessionService;
+	private SessionService sessionService;
 	
 	@PostMapping("/admins")
 	public ResponseEntity<Admin> addAdmin(@RequestBody @Valid AdminDTO admin) throws AdminException{

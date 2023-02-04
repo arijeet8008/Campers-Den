@@ -21,7 +21,7 @@ import com.campersDen.repo.SessionRepo;
 import net.bytebuddy.utility.RandomString;
 
 @Service
-public class LoginServiceImpl implements ILoginService {
+public class LoginServiceImpl implements LoginService {
 
 	@Autowired
 	private SessionRepo sRepo;

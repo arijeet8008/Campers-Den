@@ -14,13 +14,13 @@ import com.campersDen.exception.CustomerException;
 import com.campersDen.exception.LoginException;
 import com.campersDen.model.LoginDTO;
 import com.campersDen.model.Session;
-import com.campersDen.service.ILoginService;
+import com.campersDen.service.LoginService;
 
 @RestController
 public class LoginController {
 
 	@Autowired
-	private ILoginService loginService;
+	private LoginService loginService;
 	
 	@PostMapping("/login")
 	public ResponseEntity<Session> login(@RequestBody LoginDTO loginDto) throws LoginException, AdminException, CustomerException{

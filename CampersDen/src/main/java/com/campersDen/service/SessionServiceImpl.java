@@ -8,7 +8,7 @@ import com.campersDen.model.Session;
 import com.campersDen.repo.SessionRepo;
 
 @Service
-public class SessionServiceImpl implements ISessionService{
+public class SessionServiceImpl implements SessionService{
 
 	@Autowired
 	private SessionRepo sRepo;

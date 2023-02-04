@@ -10,7 +10,7 @@ import com.campersDen.model.AdminDTO;
 import com.campersDen.repo.AdminRepo;
 
 @Service
-public class AdminServiceImpl implements IAdminService{
+public class AdminServiceImpl implements AdminService{
 
 	@Autowired
 	private AdminRepo aRepo;

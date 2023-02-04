@@ -3,3 +3,7 @@
 1675329636804	Delete elements
 1675329641731	Delete element
 1675329849176	Delete elements
+1675530607628	Rename type 'IAdminService'
+1675530668260	Rename type 'ICustomerService'
+1675530704931	Rename type 'ILoginService'
+1675530738891	Rename type 'ISessionService'
