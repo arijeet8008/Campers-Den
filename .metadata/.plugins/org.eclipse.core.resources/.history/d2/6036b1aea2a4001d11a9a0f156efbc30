@@ -47,11 +47,11 @@
 			<scope>test</scope>
 		</dependency>
 
-    <dependency>
-        <groupId>org.springdoc</groupId>
-        <artifactId>springdoc-openapi-ui</artifactId>
-        <version>1.6.6</version>
-    </dependency>
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>1.5.10</version>
+</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
@@ -60,6 +60,7 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
+		
 
 	</dependencies>
 
