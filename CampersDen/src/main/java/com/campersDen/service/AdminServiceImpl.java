@@ -31,11 +31,11 @@ public class AdminServiceImpl implements IAdminService{
 		
 	}
 
-//	@Override
-//	public Admin getAdminById(int adminId) throws AdminException {
-//		return aRepo.findById(adminId).orElseThrow(()-> new AdminException("No Admin found with that Id:-"+adminId));
-//	}
-//
+	@Override
+	public Admin getAdminById(int adminId) throws AdminException {
+		return aRepo.findById(adminId).orElseThrow(()-> new AdminException("No Admin found with that Id:-"+adminId));
+	}
+
 //	@Override
 //	public Admin deleteAdminById(int adminId) throws AdminException {
 //		Admin admin = aRepo.findById(adminId).orElseThrow(()-> new AdminException("No Admin found with that Id:-"+adminId));
