@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -22,13 +23,14 @@ public class Products {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer pid;
 	
-	@NotNull
-	private String image;
+	@NotNull(message = "M1")
+	private String images;
 	
-	@NotNull
+	@NotNull(message = "M2")
 	private String name;
 	
-	@NotNull
+	@NotNull(message = "M3")
+	@Min(value = 1,message = "price should not be Zero")
 	private Double price;
 	
 }
