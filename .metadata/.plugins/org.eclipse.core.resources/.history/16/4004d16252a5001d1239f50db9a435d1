@@ -45,12 +45,16 @@ public class ProductController {
 			
 		}
 		
-		else 
+		else {
+			
 			throw new SessionException("Please login with the correct credentials");
 			
+		}
+		
+		
 	}
 	
-	@GetMapping("")
+	@GetMapping("/products")
 	public ResponseEntity<List<Products>> viewAllProductsHandler(){
 		
 		List<Products> allProducts = productService.viewAllProducts();
@@ -59,7 +63,7 @@ public class ProductController {
 		
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/products/{id}")
 	public ResponseEntity<Products> viewProductByIdHandler(@PathVariable Integer id){
 		
 		Products p = productService.findProductById(id);
@@ -68,40 +72,21 @@ public class ProductController {
 		
 	}
 	
-	@PutMapping("/{adminId}/{sessionKey}")
-	public ResponseEntity<Products> updateProductsHandler(@RequestBody Products products,@PathVariable("adminId") Integer adminId,
-			@PathVariable("sessionKey") String sessionKey) throws SessionException{
+	@PutMapping("/products")
+	public ResponseEntity<Products> updateProductsHandler(@RequestBody Products products){
 		
-		Session session = sessionService.getASessionByKey(sessionKey);
+		Products p = productService.updateProducts(products);
 		
-		if(session.getUserId() == adminId && session.getUserType() == UserType.ADMIN) {
-			
-			Products p = productService.updateProducts(products);
-			return new ResponseEntity<Products>(p, HttpStatus.ACCEPTED);
-		}
+		return new ResponseEntity<Products>(p, HttpStatus.ACCEPTED);
 		
-		else
-			throw new SessionException("Please login with the correct credentials");
-			
 	}
 	
-	@DeleteMapping("/{adminId}/{sessionKey}/{id}")
-	public ResponseEntity<Products> deleteProductHandler(@PathVariable Integer id,@PathVariable("adminId") Integer adminId,
-			@PathVariable("sessionKey") String sessionKey) throws SessionException{
+	@DeleteMapping("/products/{id}")
+	public ResponseEntity<Products> deleteProductHandler(@PathVariable Integer id){
 		
-		Session session = sessionService.getASessionByKey(sessionKey);
+		Products deleteProduct = productService.deleteProduct(id);
 		
-		if(session.getUserId() == adminId && session.getUserType() == UserType.ADMIN) {
-			
-				Products deleteProduct = productService.deleteProduct(id);
-		
-				return new ResponseEntity<Products>(deleteProduct, HttpStatus.ACCEPTED);
-			
-		}
-		
-		else
-			throw new SessionException("Please login with the correct credentials");
-
+		return new ResponseEntity<Products>(deleteProduct, HttpStatus.ACCEPTED);
 		
 	}
 	

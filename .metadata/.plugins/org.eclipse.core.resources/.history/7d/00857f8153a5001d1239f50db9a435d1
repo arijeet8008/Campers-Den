@@ -85,7 +85,7 @@ public class ProductController {
 			
 	}
 	
-	@DeleteMapping("/{adminId}/{sessionKey}/{id}")
+	@DeleteMapping("/products/{id}")
 	public ResponseEntity<Products> deleteProductHandler(@PathVariable Integer id,@PathVariable("adminId") Integer adminId,
 			@PathVariable("sessionKey") String sessionKey) throws SessionException{
 		
