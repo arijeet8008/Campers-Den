@@ -47,7 +47,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public Customer updateCustomer(Customer customer) throws CustomerException {
 		Customer existingCustomer = cRepo.findById(customer.getCustomerId()).orElseThrow(()-> new CustomerException("No Customer found with that Id:-"+customer.getCustomerId()));
-		return cRepo.save(existingCustomer);
+		return cRepo.save(customer);
 	}
 
 	@Override
