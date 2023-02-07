@@ -1,0 +1,42 @@
+package com.campersDen.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.campersDen.exception.ProductsException;
+import com.campersDen.model.Products;
+import com.campersDen.repo.ProductRepo;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+	
+	@Autowired
+	private ProductRepo productRepo;
+
+	@Override
+	public Products addProducts(Products products) throws ProductsException {
+		
+		Products saveProducts = productRepo.save(products);
+		
+		if(saveProducts == null)
+			throw new ProductsException("Add Valid Product...");
+		
+		return saveProducts;
+		
+	}
+
+	@Override
+	public List<Products> viewAllProducts() throws ProductsException {
+		
+		List<Products> allProducts = productRepo.findAll();
+		
+		if(allProducts.isEmpty())
+			throw new ProductsException("No Products Found");
+		
+		return allProducts;
+		
+	}
+
+}

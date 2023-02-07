@@ -41,16 +41,16 @@ public class Customer {
 //	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
 //	private List<Orders> orders;
 //
-//	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-//	private ProductCart cart = new ProductCart();
-//
-//	public ProductCart getCart() {
-//		return cart;
-//	}
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private Cart cart = new Cart();
 
-//	public void setCart(ProductCart cart) {
-//		this.cart = cart;
-//	}
+	public Cart getCart() {
+		return cart;
+	}
+
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 
 	public Customer() {
 		super();

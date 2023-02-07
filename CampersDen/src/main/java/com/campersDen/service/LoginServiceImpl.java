@@ -62,7 +62,9 @@ public class LoginServiceImpl implements LoginService {
 			adminSession.setUserType(UserType.ADMIN);
 			session = sRepo.save(adminSession);
 
-		} else if (loginDto.getUserType() == UserType.CUSTOMER) {
+		}
+		
+		else if (loginDto.getUserType() == UserType.CUSTOMER) {
 
 			Customer customer = cRepo.findByEmail(loginDto.getEmail());
 
