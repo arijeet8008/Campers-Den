@@ -38,9 +38,9 @@ public class Customer {
 	@JoinColumn(name = "addressId")
 	private Address address;
 
-//	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
-//	private List<Orders> orders;
-//
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
+	private List<Orders> orders;
+
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private Cart cart = new Cart();
 
