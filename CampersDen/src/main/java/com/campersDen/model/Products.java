@@ -33,4 +33,7 @@ public class Products {
 	@Min(value = 1,message = "price should not be Zero")
 	private Double price;
 	
+	
+	private Integer quantity;
+	
 }
