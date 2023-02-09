@@ -57,18 +57,23 @@ public class OrdersController {
 			Cart cart = cartService.viewCartbyId(cartId, customerId);
 			orders.setCart(cart);
 			orders.setCustomer(customerService.getCustomerById(customerId));
-			orders.setQuantity(cart.getProducts().size());
 
 			List<Products> products = cart.getProducts();
 
 			Double productCost = 0.0;
+			
+			Integer totalQuantity = 0;
 
 			for (Products p : products) {
 				productCost = productCost + (p.getPrice() * p.getQuantity());
-
+				totalQuantity += p.getQuantity();
 			}
+			
+			orders.setQuantity(totalQuantity);
 
 			orders.setTotalCost(productCost);
+			
+//			orders.getCart().setTotalAmount(productCost);
 
 			Orders saveOrders = ordersService.addOrder(orders);
 

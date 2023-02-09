@@ -1,5 +1,7 @@
 package com.campersDen.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,7 @@ import com.campersDen.exception.CartException;
 import com.campersDen.exception.CustomerException;
 import com.campersDen.exception.SessionException;
 import com.campersDen.model.Cart;
+import com.campersDen.model.Products;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
 import com.campersDen.service.CartService;
@@ -38,6 +41,16 @@ public class CartController {
 		if(session.getUserId() == customerId && session.getUserType() == UserType.CUSTOMER) {
 			
 			Cart updateCart = cartService.addProductsToCart(productId, customerId);
+			
+			Double totalPrice = 0.0;
+			
+			List<Products> allProducts = updateCart.getProducts();
+			
+			for (Products products : allProducts) {
+				totalPrice += products.getPrice()*products.getQuantity();
+			}
+			
+			updateCart.setTotalAmount(totalPrice);
 			
 			return new ResponseEntity<Cart>(updateCart, HttpStatus.ACCEPTED);
 			

@@ -30,14 +30,14 @@ import com.campersDen.service.SessionService;
 public class CustomerController {
 
 	@Autowired
-	private CustomerService custService;
+	private CustomerService customerService;
 	
 	@Autowired
 	private SessionService sessionService;
 	
 	@PostMapping("/customers")
 	public ResponseEntity<Customer> addCustomer(@RequestBody @Valid CustomerDTO customer) throws CustomerException{
-		Customer addedCustomer = custService.addCustomer(customer);
+		Customer addedCustomer = customerService.addCustomer(customer);
 		return new ResponseEntity<>(addedCustomer, HttpStatus.CREATED);		
 	}
 	
@@ -45,7 +45,7 @@ public class CustomerController {
 	public ResponseEntity<Customer> getCustomerById(@PathVariable("customerId") Integer customerId, @RequestParam("sessionKey") String sessionKey) throws CustomerException, SessionException{
 		Session session = sessionService.getASessionByKey(sessionKey);
 		if(session.getUserId() == customerId || session.getUserType() == UserType.ADMIN) {
-			Customer customer = custService.getCustomerById(customerId);
+			Customer customer = customerService.getCustomerById(customerId);
 			return new ResponseEntity<>(customer, HttpStatus.ACCEPTED);
 		}
 		throw new SessionException("Please login with the correct credentials");
@@ -56,7 +56,7 @@ public class CustomerController {
 	public ResponseEntity<Customer> deleteCustomerById(@PathVariable("customerId") Integer customerId, @RequestParam("sessionKey") String sessionKey) throws CustomerException, SessionException{
 		Session session = sessionService.getASessionByKey(sessionKey);
 		if(session.getUserId() == customerId || session.getUserType() == UserType.ADMIN) {
-			Customer customer = custService.deleteCustomerById(customerId);
+			Customer customer = customerService.deleteCustomerById(customerId);
 			return new ResponseEntity<>(customer, HttpStatus.ACCEPTED);
 		}
 		throw new SessionException("Please login with the correct credentials");
@@ -67,7 +67,7 @@ public class CustomerController {
 	public ResponseEntity<Customer> updateCustomer(@RequestBody @Valid Customer customer, @RequestParam("SessionKey")String sessionKey) throws CustomerException, SessionException{
 		Session session = sessionService.getASessionByKey(sessionKey);
 		if(session.getUserId() == customer.getCustomerId() || session.getUserType() == UserType.ADMIN) {
-			Customer updatedCustomer = custService.updateCustomer(customer);
+			Customer updatedCustomer = customerService.updateCustomer(customer);
 			return new ResponseEntity<>(updatedCustomer, HttpStatus.ACCEPTED);
 		}
 		throw new SessionException("Please login with the correct credentials");
@@ -77,7 +77,7 @@ public class CustomerController {
 	public ResponseEntity<List<Customer>> getAllCustomers(@RequestParam("sessionKey")String sessionKey) throws CustomerException, SessionException{
 		Session session = sessionService.getASessionByKey(sessionKey);
 		if(session.getUserType() == UserType.ADMIN) {
-			return new ResponseEntity<>(custService.getAllCustomers(), HttpStatus.ACCEPTED);
+			return new ResponseEntity<>(customerService.getAllCustomers(), HttpStatus.ACCEPTED);
 		}
 		throw new SessionException("Please login with the correct credentails");
 	}
