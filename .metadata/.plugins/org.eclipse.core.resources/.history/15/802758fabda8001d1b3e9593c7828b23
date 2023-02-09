@@ -20,18 +20,18 @@ public class OrdersServiceImpl implements OrdersService{
 	private OrdersRepo ordersRepo;
 
 	@Override
-	public Orders addOrder(Orders orders) throws OrdersException {
+	public Orders addOrder(OrdersDto ordersDto) throws OrdersException {
 		
-//		Orders orders = new Orders();
+		Orders orders = new Orders();
 		
-//		DeliveryAddress deliveryAddress = new DeliveryAddress();
-//		deliveryAddress.setCity(ordersDto.getDeliveryAddressDTO().getCity());
-//		deliveryAddress.setColony(ordersDto.getDeliveryAddressDTO().getColony());
-//		deliveryAddress.setHouseNo(ordersDto.getDeliveryAddressDTO().getHouseNo());
-//		deliveryAddress.setPinCode(ordersDto.getDeliveryAddressDTO().getPinCode());
-//		deliveryAddress.setState(ordersDto.getDeliveryAddressDTO().getState());
-//		
-//		orders.setDeliveryAddress(deliveryAddress);
+		DeliveryAddress deliveryAddress = new DeliveryAddress();
+		deliveryAddress.setCity(ordersDto.getDeliveryAddressDTO().getCity());
+		deliveryAddress.setColony(ordersDto.getDeliveryAddressDTO().getColony());
+		deliveryAddress.setHouseNo(ordersDto.getDeliveryAddressDTO().getHouseNo());
+		deliveryAddress.setPinCode(ordersDto.getDeliveryAddressDTO().getPinCode());
+		deliveryAddress.setState(ordersDto.getDeliveryAddressDTO().getState());
+		
+		orders.setDeliveryAddress(deliveryAddress);
 		
 		orders.setOrderDate(LocalDateTime.now());
 		

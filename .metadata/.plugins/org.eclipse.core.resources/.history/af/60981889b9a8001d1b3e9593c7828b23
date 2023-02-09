@@ -1,0 +1,10 @@
+package com.campersDen.model;
+
+import javax.validation.constraints.NotNull;
+
+public class OrdersDto {
+
+	@NotNull
+	private DeliveryAddressDTO deliveryAddressDTO;
+	
+}
