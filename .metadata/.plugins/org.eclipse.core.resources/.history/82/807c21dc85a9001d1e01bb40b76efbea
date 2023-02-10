@@ -28,8 +28,6 @@ public class Cart {
 	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Products> products;
 	
-	private Integer quantity;
-	
 	private Double totalAmount;
 	
 }

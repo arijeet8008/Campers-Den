@@ -47,12 +47,10 @@ public class CartController {
 			List<Products> allProducts = updateCart.getProducts();
 			
 			for (Products products : allProducts) {
-				totalPrice += products.getPrice();
+				totalPrice += products.getPrice()*products.getQuantity();
 			}
 			
 			updateCart.setTotalAmount(totalPrice);
-			
-			updateCart.setQuantity(allProducts.size());
 			
 			return new ResponseEntity<Cart>(updateCart, HttpStatus.ACCEPTED);
 			

@@ -52,8 +52,6 @@ public class CartController {
 			
 			updateCart.setTotalAmount(totalPrice);
 			
-			updateCart.setQuantity(allProducts.size());
-			
 			return new ResponseEntity<Cart>(updateCart, HttpStatus.ACCEPTED);
 			
 		}
