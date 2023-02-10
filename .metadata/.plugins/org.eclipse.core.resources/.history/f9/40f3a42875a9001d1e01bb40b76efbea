@@ -3,8 +3,6 @@ package com.campersDen.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.campersDen.exception.CustomerException;
-import com.campersDen.exception.OrdersException;
 import com.campersDen.exception.PaymentException;
 import com.campersDen.model.Payment;
 import com.campersDen.repo.PaymentRepo;
@@ -16,9 +14,8 @@ public class PaymentServiceImpl implements PaymentService{
 	private PaymentRepo repo;
 
 	@Override
-	public Payment finalPayment(Payment payment, Integer orderId, Integer customerId)
-			throws PaymentException, CustomerException, OrdersException {
-		
+	public Payment finalPayment(Payment payment) throws PaymentException {
+
 		Payment p = repo.save(payment);
 		
 		if(p == null) {
@@ -26,7 +23,7 @@ public class PaymentServiceImpl implements PaymentService{
 		}
 		
 		return p;
+		
 	}
-
 
 }

@@ -7,8 +7,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.campersDen.exception.CartException;
-import com.campersDen.exception.CustomerException;
 import com.campersDen.exception.OrdersException;
 import com.campersDen.model.DeliveryAddress;
 import com.campersDen.model.Orders;
@@ -22,8 +20,7 @@ public class OrdersServiceImpl implements OrdersService{
 	private OrdersRepo ordersRepo;
 
 	@Override
-	public Orders addOrder(Orders orders,Integer customerId,Integer cartId) throws 
-	OrdersException,CartException,CustomerException {
+	public Orders addOrder(Orders orders) throws OrdersException {
 		
 //		Orders orders = new Orders();
 		

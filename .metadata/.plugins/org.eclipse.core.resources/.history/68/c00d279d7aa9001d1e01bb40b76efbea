@@ -15,8 +15,11 @@ import com.campersDen.exception.PaymentException;
 import com.campersDen.exception.SessionException;
 import com.campersDen.model.Orders;
 import com.campersDen.model.Payment;
+import com.campersDen.model.Products;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
+import com.campersDen.service.AdminService;
+import com.campersDen.service.CustomerService;
 import com.campersDen.service.OrdersService;
 import com.campersDen.service.PaymentService;
 import com.campersDen.service.SessionService;
@@ -49,7 +52,7 @@ public class PaymentController {
 			Orders orders = ordersService.viewOrderById(orderId);
 			
 			payment.setTotalOrdervalue(orders.getTotalCost());
-			payment.setOrders(orders);
+//			payment.setOrders(ordersService.viewOrderById(orderId));
 			
 			Payment p = paymentService.finalPayment(payment, orderId, customerId);
 			
