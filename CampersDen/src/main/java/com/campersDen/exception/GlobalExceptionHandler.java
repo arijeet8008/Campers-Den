@@ -12,6 +12,20 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
+	
+	
+	@ExceptionHandler(PaymentException.class)
+	public ResponseEntity<MyErrorDetails> paymentNotFoundException(PaymentException ge, WebRequest req) {
+
+		MyErrorDetails err = new MyErrorDetails();
+
+		err.setTimestamp(LocalDateTime.now());
+		err.setMessage(ge.getMessage());
+		err.setDetails(req.getDescription(false));
+
+		return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
+
+	}
 
 	@ExceptionHandler(ProductsException.class)
 	public ResponseEntity<MyErrorDetails> productNotFoundException(ProductsException ge, WebRequest req) {
