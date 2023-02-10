@@ -7,8 +7,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.campersDen.exception.CartException;
+import com.campersDen.exception.CustomerException;
 import com.campersDen.exception.OrdersException;
+import com.campersDen.model.DeliveryAddress;
 import com.campersDen.model.Orders;
+import com.campersDen.model.OrdersDto;
 import com.campersDen.repo.OrdersRepo;
 
 @Service
@@ -18,7 +22,19 @@ public class OrdersServiceImpl implements OrdersService{
 	private OrdersRepo ordersRepo;
 
 	@Override
-	public Orders addOrder(Orders orders) throws OrdersException {
+	public Orders addOrder(Orders orders,Integer customerId,Integer cartId) throws 
+	OrdersException,CartException,CustomerException {
+		
+//		Orders orders = new Orders();
+		
+//		DeliveryAddress deliveryAddress = new DeliveryAddress();
+//		deliveryAddress.setCity(ordersDto.getDeliveryAddressDTO().getCity());
+//		deliveryAddress.setColony(ordersDto.getDeliveryAddressDTO().getColony());
+//		deliveryAddress.setHouseNo(ordersDto.getDeliveryAddressDTO().getHouseNo());
+//		deliveryAddress.setPinCode(ordersDto.getDeliveryAddressDTO().getPinCode());
+//		deliveryAddress.setState(ordersDto.getDeliveryAddressDTO().getState());
+//		
+//		orders.setDeliveryAddress(deliveryAddress);
 		
 		orders.setOrderDate(LocalDateTime.now());
 		

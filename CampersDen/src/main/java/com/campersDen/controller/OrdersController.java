@@ -75,7 +75,7 @@ public class OrdersController {
 			
 //			orders.getCart().setTotalAmount(productCost);
 
-			Orders saveOrders = ordersService.addOrder(orders);
+			Orders saveOrders = ordersService.addOrder(orders, customerId, cartId);
 
 			return new ResponseEntity<Orders>(saveOrders, HttpStatus.CREATED);
 

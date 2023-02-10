@@ -2,12 +2,14 @@ package com.campersDen.service;
 
 import java.util.List;
 
+import com.campersDen.exception.CartException;
+import com.campersDen.exception.CustomerException;
 import com.campersDen.exception.OrdersException;
 import com.campersDen.model.Orders;
 
 public interface OrdersService {
 
-	public Orders addOrder(Orders orders) throws OrdersException;
+	public Orders addOrder(Orders orders,Integer customerId,Integer cartId) throws OrdersException,CartException,CustomerException;
 	
 	public List<Orders> viewAllOrders()throws OrdersException;
 	

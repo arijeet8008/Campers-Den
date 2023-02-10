@@ -1,0 +1,5 @@
+package com.campersDen.service;
+
+public interface PaymentService {
+
+}
