@@ -62,14 +62,14 @@ public class OrdersController {
 
 			Double productCost = 0.0;
 			
-			Integer totalQuantity = 0;
+//			Integer totalQuantity = 0;
 
 			for (Products p : products) {
-				productCost = productCost + (p.getPrice() * p.getQuantity());
-				totalQuantity += p.getQuantity();
+				productCost = productCost + p.getPrice();
+//				totalQuantity += p.getQuantity();
 			}
 			
-			orders.setQuantity(totalQuantity);
+			orders.setQuantity(products.size());
 
 			orders.setTotalCost(productCost);
 			

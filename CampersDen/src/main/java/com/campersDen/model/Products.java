@@ -33,8 +33,8 @@ public class Products {
 	@Min(value = 1,message = "price should not be Zero")
 	private Double price;
 	
-	@NotNull(message = "M3")
-	@Min(value = 1,message = "quantity should not be Zero")
-	private Integer quantity;
+//	@NotNull(message = "M3")
+//	@Min(value = 1,message = "quantity should not be Zero")
+//	private Integer quantity;
 	
 }

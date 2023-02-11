@@ -1,5 +1,7 @@
 package com.campersDen.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,8 @@ public class CartServiceImpl implements CartService{
 	private ProductRepo productRepo;
 
 	@Override
-	public Cart addProductsToCart(Integer productId, Integer customerId) throws ProductsException, CustomerException {
+	public Cart addProductsToCart(Integer productId, Integer customerId) throws CartException,
+									ProductsException, CustomerException {
 
 		Customer customer = customerService.getCustomerById(customerId);
 		
@@ -40,6 +43,11 @@ public class CartServiceImpl implements CartService{
 				Cart cart = customer.getCart();
 				
 				cart.getProducts().add(opt.get());
+				
+//				List<Products> list = new ArrayList<>();
+//				list.add(opt.get());
+				
+				
 				
 				return cartrepo.save(cart);
 				
