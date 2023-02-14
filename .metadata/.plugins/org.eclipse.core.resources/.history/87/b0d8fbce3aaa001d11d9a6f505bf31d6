@@ -32,9 +32,6 @@ public class CartController {
 	@Autowired
 	private SessionService sessionService;
 	
-//	@Autowired
-//	private ProductService productService;
-	
 	@PostMapping("/products/{productId}")
 	public ResponseEntity<Cart> addProductsToCartHandler(@RequestParam("customerId") Integer customerId,
 			@RequestParam("sessionKey") String sessionKey, @PathVariable("productId") Integer productId) throws SessionException, CustomerException{
@@ -44,8 +41,6 @@ public class CartController {
 		if(session.getUserId() == customerId && session.getUserType() == UserType.CUSTOMER) {
 			
 			Cart updateCart = cartService.addProductsToCart(productId, customerId);
-			
-//			Products products = productService.findProductById(productId);
 			
 			Double totalPrice = 0.0;
 			

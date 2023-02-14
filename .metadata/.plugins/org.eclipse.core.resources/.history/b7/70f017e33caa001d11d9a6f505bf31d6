@@ -20,6 +20,7 @@ import com.campersDen.model.Products;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
 import com.campersDen.service.CartService;
+import com.campersDen.service.ProductService;
 import com.campersDen.service.SessionService;
 
 @RestController

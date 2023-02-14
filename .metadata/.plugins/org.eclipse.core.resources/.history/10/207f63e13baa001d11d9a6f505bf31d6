@@ -44,16 +44,16 @@ public class CartServiceImpl implements CartService{
 				
 				cart.getProducts().add(opt.get());
 				
-//				List<Products> list = new ArrayList<>();
-//				list.add(opt.get());
-//				
-//				Double totalAmount = 0.0;
-//				
-//				for (Products products : list) {
-//					totalAmount += products.getPrice();
-//				}
-//				cart.setTotalAmount(totalAmount);
-//				cart.setQuantity(list.size());
+				List<Products> list = new ArrayList<>();
+				list.add(opt.get());
+				
+				Double totalAmount = 0.0;
+				
+				for (Products products : list) {
+					totalAmount += products.getPrice();
+				}
+				cart.setTotalAmount(totalAmount);
+				cart.setQuantity(list.size());
 				
 				return cartrepo.save(cart);
 				
