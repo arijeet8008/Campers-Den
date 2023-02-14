@@ -27,6 +27,9 @@ public class CartServiceImpl implements CartService{
 	
 	@Autowired
 	private ProductRepo productRepo;
+	
+//	@Autowired
+//	private ProductService productService;
 
 	@Override
 	public Cart addProductsToCart(Integer productId, Integer customerId) throws CartException,
@@ -44,11 +47,11 @@ public class CartServiceImpl implements CartService{
 				
 				cart.getProducts().add(opt.get());
 				
-//				List<Products> list = new ArrayList<>();
+//				List<Products> list = productService.viewAllProducts();
 //				list.add(opt.get());
-//				
+				
 //				Double totalAmount = 0.0;
-//				
+				
 //				for (Products products : list) {
 //					totalAmount += products.getPrice();
 //				}

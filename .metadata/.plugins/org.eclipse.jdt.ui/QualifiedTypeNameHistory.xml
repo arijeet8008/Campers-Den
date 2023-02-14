@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="com.campersDen.model.Customer"/>
     <fullyQualifiedTypeName name="com.campersDen.repo.ProductRepo"/>
     <fullyQualifiedTypeName name="com.campersDen.repo.Cartrepo"/>
@@ -20,7 +18,6 @@
     <fullyQualifiedTypeName name="com.campersDen.model.Cart"/>
     <fullyQualifiedTypeName name="com.campersDen.model.Address"/>
     <fullyQualifiedTypeName name="com.campersDen.model.AddressDTO"/>
-    <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
     <fullyQualifiedTypeName name="com.campersDen.model.DeliveryAddressDTO"/>
     <fullyQualifiedTypeName name="com.campersDen.model.OrdersDto"/>
     <fullyQualifiedTypeName name="com.campersDen.model.DeliveryAddress"/>
@@ -31,7 +28,6 @@
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="com.campersDen.model.TransitionMode"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
-    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
     <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
@@ -52,12 +48,16 @@
     <fullyQualifiedTypeName name="com.campersDen.exception.CustomerException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="com.campersDen.exception.CartException"/>
-    <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.Products"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.Category"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.campersDen.service.ProductService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.campersDen.model.Products"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
 </qualifiedTypeNameHistroy>

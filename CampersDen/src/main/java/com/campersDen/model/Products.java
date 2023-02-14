@@ -1,5 +1,7 @@
 package com.campersDen.model;
 
+import java.net.URL;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +26,7 @@ public class Products {
 	private Integer pid;
 	
 	@NotNull(message = "M1")
-	private String images;
+	private URL images;
 	
 	@NotNull(message = "M2")
 	private String name;
@@ -33,11 +35,7 @@ public class Products {
 	@Min(value = 1,message = "price should not be Zero")
 	private Double price;
 	
-	@NotNull(message = "M2")
-	private String category;
-	
-//	@NotNull(message = "M3")
-//	@Min(value = 1,message = "quantity should not be Zero")
-//	private Integer quantity;
-	
+//	@NotNull(message = "M2")
+	private Category category;
+		
 }

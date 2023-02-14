@@ -9,7 +9,6 @@ import com.campersDen.exception.CustomerException;
 import com.campersDen.model.Address;
 import com.campersDen.model.Customer;
 import com.campersDen.model.CustomerDTO;
-import com.campersDen.repo.AddressRepo;
 import com.campersDen.repo.CustomerRepo;
 
 @Service
@@ -18,8 +17,8 @@ public class CustomerServiceImpl implements CustomerService{
 	@Autowired
 	private CustomerRepo cRepo;
 	
-	@Autowired
-	private AddressRepo aRepo;
+//	@Autowired
+//	private AddressRepo aRepo;
 	
 	@Override
 	public Customer addCustomer(CustomerDTO customerDto) throws CustomerException {

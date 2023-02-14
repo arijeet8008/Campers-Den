@@ -5,24 +5,24 @@ import javax.validation.constraints.NotNull;
 
 public class AddressDTO {
 	
-	@NotNull
-	@NotBlank
+//	@NotNull
+//	@NotBlank
 	private String houseNo;
 	
-	@NotNull
-	@NotBlank
+//	@NotNull
+//	@NotBlank
 	private String colony;
 	
-	@NotNull
-	@NotBlank
+//	@NotNull
+//	@NotBlank
 	private String city;
 	
-	@NotNull
-	@NotBlank
+//	@NotNull
+//	@NotBlank
 	private String state;
 	
-	@NotNull
-	@NotBlank
+//	@NotNull
+//	@NotBlank
 	private Integer pinCode;
 
 	public String getHouseNo() {

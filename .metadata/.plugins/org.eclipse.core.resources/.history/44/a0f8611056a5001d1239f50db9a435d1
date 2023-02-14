@@ -1,5 +1,0 @@
-package com.campersDen.service;
-
-public interface CartService {
-
-}

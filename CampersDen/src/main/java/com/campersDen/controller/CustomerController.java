@@ -38,7 +38,7 @@ public class CustomerController {
 	@PostMapping("/customers")
 	public ResponseEntity<Customer> addCustomer(@RequestBody @Valid CustomerDTO customer) throws CustomerException{
 		Customer addedCustomer = customerService.addCustomer(customer);
-		return new ResponseEntity<>(addedCustomer, HttpStatus.CREATED);		
+		return new ResponseEntity<Customer>(addedCustomer, HttpStatus.CREATED);		
 	}
 	
 	@GetMapping("/customers/{customerId}")

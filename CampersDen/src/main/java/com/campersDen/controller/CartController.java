@@ -51,8 +51,8 @@ public class CartController {
 			
 			List<Products> allProducts = updateCart.getProducts();
 			
-			for (Products products : allProducts) {
-				totalPrice += products.getPrice();
+			for (Products p : allProducts) {
+				totalPrice += p.getPrice();
 			}
 			
 			updateCart.setTotalAmount(totalPrice);
