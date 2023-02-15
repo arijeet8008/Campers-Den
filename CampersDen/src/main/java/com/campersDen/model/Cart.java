@@ -8,6 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +30,10 @@ public class Cart {
 	
 	@ManyToMany(cascade = CascadeType.ALL)
 	private List<Products> products;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JsonIgnore
+	private Customer customer;
 	
 	private Integer quantity;
 	

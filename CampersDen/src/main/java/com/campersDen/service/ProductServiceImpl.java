@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.campersDen.exception.ProductsException;
+import com.campersDen.model.Category;
 import com.campersDen.model.Products;
 import com.campersDen.repo.ProductRepo;
 
@@ -76,5 +77,17 @@ public class ProductServiceImpl implements ProductService{
 			throw new ProductsException("No Products Found");
 		
 	}
+
+//	@Override
+//	public List<Products> findProductByCategory(Category category) throws ProductsException {
+//		
+//		List<Products> plist = productRepo.findByCategory(category);
+//		
+//		if(plist.isEmpty())
+//			throw new ProductsException("No Products Found By This Category");
+//		
+//		return plist;
+//		
+//	}
 
 }

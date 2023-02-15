@@ -3,6 +3,7 @@ package com.campersDen.service;
 import java.util.List;
 
 import com.campersDen.exception.ProductsException;
+import com.campersDen.model.Category;
 import com.campersDen.model.Products;
 
 public interface ProductService {
@@ -16,5 +17,7 @@ public interface ProductService {
 	public Products updateProducts(Products products) throws ProductsException;
 	
 	public Products deleteProduct(Integer id) throws ProductsException;
+
+//	public List<Products> findProductByCategory(Category category) throws ProductsException;
 		
 }
