@@ -41,6 +41,7 @@ public class Orders {
 	private double totalCost;
 
 	@ManyToOne(cascade = CascadeType.ALL)
+	@JsonIgnore
 	private Customer customer;
 
 	@OneToOne

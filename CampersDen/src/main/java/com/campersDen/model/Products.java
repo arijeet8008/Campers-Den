@@ -1,11 +1,17 @@
 package com.campersDen.model;
 
+import java.net.URL;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +30,7 @@ public class Products {
 	private Integer pid;
 	
 	@NotNull(message = "M1")
-	private String images;
+	private URL images;
 	
 	@NotNull(message = "M2")
 	private String name;
@@ -32,6 +38,12 @@ public class Products {
 	@NotNull(message = "M3")
 	@Min(value = 1,message = "price should not be Zero")
 	private Double price;
+	
+	private Category category;
+	
+//	@ManyToOne
+//	@JsonIgnore
+//	private Cart cart;
 	
 //	@NotNull(message = "M3")
 //	@Min(value = 1,message = "quantity should not be Zero")
