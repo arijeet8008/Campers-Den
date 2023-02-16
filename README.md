@@ -14,6 +14,9 @@ It is an eCommerce site for Camping,Hiking& More Adventures Trips & Accessories 
 - Stored the data on MySQL and used it for Authentication.
 - Deployed the website on GitHub.
 
+# ER-Diagram 
+![CampersDen_ErDiagram](https://user-images.githubusercontent.com/105917614/219299658-14dafa8c-91d5-47d2-95df-c604be37f306.png)
+
 # Technology Used
 - JAVA
 - Spring
