@@ -1,5 +1,0 @@
-package com.campersDen.model;
-
-public enum TransitionMode {
-
-}

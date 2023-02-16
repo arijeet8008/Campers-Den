@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.campersDen.exception.SessionException;
+import com.campersDen.model.Category;
 import com.campersDen.model.Products;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
@@ -104,5 +105,14 @@ public class ProductController {
 
 		
 	}
+	
+//	@GetMapping("/{category}")
+//	public ResponseEntity<List<Products>> viewProductByCategoryHandler(@PathVariable Category category){
+//		
+//		List<Products> p = productService.findProductByCategory(category);
+//		
+//		return new ResponseEntity<List<Products>>(p, HttpStatus.ACCEPTED);
+//		
+//	}
 	
 }

@@ -1,5 +1,0 @@
-package com.campersDen.exception;
-
-public class PaymentException {
-
-}

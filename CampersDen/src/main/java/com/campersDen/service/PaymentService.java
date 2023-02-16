@@ -9,4 +9,6 @@ public interface PaymentService {
 
 	public Payment finalPayment(Payment payment,Integer orderId,Integer customerId) throws PaymentException,CustomerException,OrdersException;
 	
+	public Payment cancelPayment(Integer customerId,Integer paymentId) throws PaymentException,CustomerException;
+	
 }
