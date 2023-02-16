@@ -20,7 +20,7 @@ It is an eCommerce site for Camping,Hiking& More Adventures Trips & Accessories 
 # ER-Diagram 
 ![CampersDen_ErDiagram](https://user-images.githubusercontent.com/105917614/219299658-14dafa8c-91d5-47d2-95df-c604be37f306.png)
 
-# Technology Used
+# Tech-Stack Used
 - JAVA
 - Spring
 - Spring Boot
