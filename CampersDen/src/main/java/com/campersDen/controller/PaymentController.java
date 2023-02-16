@@ -3,6 +3,7 @@ package com.campersDen.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import com.campersDen.exception.PaymentException;
 import com.campersDen.exception.SessionException;
 import com.campersDen.model.Orders;
 import com.campersDen.model.Payment;
+import com.campersDen.model.Products;
 import com.campersDen.model.Session;
 import com.campersDen.model.UserType;
 import com.campersDen.service.OrdersService;
@@ -61,5 +63,27 @@ public class PaymentController {
 			throw new SessionException("Please login with the correct credentials");
 		
 	}
+	
+	@DeleteMapping("/{customerId}/{sessionKey}/{paymentId}")
+	public ResponseEntity<Payment> cancelPaymentHandler(@PathVariable Integer customerId,
+			@PathVariable Integer paymentId,@PathVariable String sessionKey) throws SessionException, PaymentException, CustomerException{
+		
+		Session session = sessionService.getASessionByKey(sessionKey);
+		
+		if(session.getUserId() == customerId && session.getUserType() == UserType.CUSTOMER) {
+			
+				Payment payment = paymentService.cancelPayment(customerId, paymentId);
+				
+				return new ResponseEntity<Payment>(payment, HttpStatus.ACCEPTED);
+			
+		}
+		
+		else
+			throw new SessionException("Please login with the correct credentials");
+
+		
+	}
+		
+	
 	
 }

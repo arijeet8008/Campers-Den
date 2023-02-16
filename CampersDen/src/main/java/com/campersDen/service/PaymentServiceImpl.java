@@ -1,5 +1,7 @@
 package com.campersDen.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,20 @@ public class PaymentServiceImpl implements PaymentService{
 		}
 		
 		return p;
+	}
+
+	@Override
+	public Payment cancelPayment(Integer customerId, Integer paymentId) throws PaymentException, CustomerException {
+		
+		Optional<Payment> opt = repo.findById(paymentId);
+		
+		if(opt.isEmpty())
+			throw new PaymentException("Invalid Payment Id");
+		
+		Payment payment = opt.get();
+		repo.delete(payment);
+		return payment;
+		
 	}
 
 
