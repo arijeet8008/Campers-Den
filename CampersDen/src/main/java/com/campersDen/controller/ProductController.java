@@ -60,7 +60,7 @@ public class ProductController {
 		
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping(value = "/{id}")
 	public ResponseEntity<Products> viewProductByIdHandler(@PathVariable Integer id){
 		
 		Products p = productService.findProductById(id);
@@ -107,7 +107,7 @@ public class ProductController {
 	}
 	
 //	@GetMapping("/{category}")
-//	public ResponseEntity<List<Products>> viewProductByCategoryHandler(@PathVariable Category category){
+//	public ResponseEntity<List<Products>> viewProductByCategoryHandler(@PathVariable String category){
 //		
 //		List<Products> p = productService.findProductByCategory(category);
 //		

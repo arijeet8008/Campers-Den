@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="com.campersDen.model.Customer"/>
     <fullyQualifiedTypeName name="com.campersDen.repo.ProductRepo"/>
@@ -11,7 +9,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Enum"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="com.campersDen.service.SessionService"/>
     <fullyQualifiedTypeName name="com.campersDen.service.CustomerService"/>
@@ -42,22 +39,25 @@
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="com.campersDen.repo.PaymentRepo"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="com.campersDen.exception.PaymentException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="com.campersDen.service.PaymentService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.campersDen.service.AdminService"/>
     <fullyQualifiedTypeName name="com.campersDen.service.OrdersService"/>
-    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="com.campersDen.model.Payment"/>
     <fullyQualifiedTypeName name="com.campersDen.exception.OrdersException"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.campersDen.exception.CartException"/>
-    <fullyQualifiedTypeName name="com.campersDen.exception.CustomerException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.campersDen.exception.PaymentException"/>
+    <fullyQualifiedTypeName name="com.campersDen.exception.CustomerException"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.campersDen.model.Payment"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 </qualifiedTypeNameHistroy>
