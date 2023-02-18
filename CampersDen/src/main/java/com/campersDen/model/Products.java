@@ -4,6 +4,8 @@ import java.net.URL;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -39,14 +41,8 @@ public class Products {
 	@Min(value = 1,message = "price should not be Zero")
 	private Double price;
 	
+	@Enumerated(value = EnumType.STRING)
 	private Category category;
 	
-//	@ManyToOne
-//	@JsonIgnore
-//	private Cart cart;
-	
-//	@NotNull(message = "M3")
-//	@Min(value = 1,message = "quantity should not be Zero")
-//	private Integer quantity;
 	
 }
