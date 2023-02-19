@@ -32,3 +32,5 @@
 - Spring data JPA
 - Hibernate
 - MySQL
+# Prepared By :
+- Arijeet Chowdhury
