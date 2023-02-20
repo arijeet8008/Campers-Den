@@ -2,7 +2,7 @@
 ### It is an eCommerce site of the acessories & tools for Camping,Hiking&Any kind of adventures here is the Heaven for you. Here Customer can buy ,order & payment          easily.
 
 ## Swagger link:
-    http://localhost:8090/swagger-ui/index.html
+  - http://localhost:8090/swagger-ui/index.html
 
 # Services Offered
 - User Login and Signup.
