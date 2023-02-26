@@ -78,16 +78,16 @@ public class ProductServiceImpl implements ProductService{
 		
 	}
 
-//	@Override
-//	public List<Products> findProductByCategory(String category) throws ProductsException {
-//		
-//		List<Products> plist = productRepo.findByCategory(category);
-//		
-//		if(plist.isEmpty())
-//			throw new ProductsException("No Products Found By This Category");
-//		
-//		return plist;
-//		
-//	}
+	@Override
+	public List<Products> findProductByCategory(Category category) throws ProductsException {
+		
+		List<Products> plist = productRepo.findByCategory(category);
+		
+		if(plist.isEmpty())
+			throw new ProductsException("No Products Found By This Category");
+		
+		return plist;
+		
+	}
 
 }

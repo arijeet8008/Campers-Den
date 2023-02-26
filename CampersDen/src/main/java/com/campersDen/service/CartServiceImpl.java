@@ -1,5 +1,6 @@
 package com.campersDen.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,10 +43,19 @@ public class CartServiceImpl implements CartService{
 				
 				cart.getProducts().add(opt.get());
 				
-//				List<Products> list = new ArrayList<>();
-//				list.add(opt.get());
+				List<Products> allProducts = cart.getProducts();
 				
+				Double totalPrice = 0.0;
 				
+//				updateCart.setProducts(allProducts);
+				
+				for (Products products : allProducts) {
+					totalPrice += products.getPrice();
+				}
+				
+				cart.setTotalAmount(totalPrice);
+				
+				cart.setQuantity(allProducts.size());
 				
 				return cartrepo.save(cart);
 				
