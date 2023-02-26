@@ -18,6 +18,6 @@ public interface ProductService {
 	
 	public Products deleteProduct(Integer id) throws ProductsException;
 
-//	public List<Products> findProductByCategory(String category) throws ProductsException;
+	public List<Products> findProductByCategory(Category category) throws ProductsException;
 		
 }
